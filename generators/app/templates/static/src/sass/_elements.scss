@@ -1,0 +1,187 @@
+/**
+ * _elements.scss
+ *
+ * - Styles for the entire calendar webpart,
+ *   it contains notes on how to override the
+ *   default glDatePicker(gldp) styles.
+ *
+ * - There also may be sharepoint styles
+ *   you will also need to override.
+ */
+
+
+#calendar {
+    box-sizing: border-box;
+    max-width: 940px;
+    margin: 0 auto;
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+}
+
+
+
+// Loading image to display before calendar is finished loading.
+.calendar_loader {
+    background: lighten($color4, $hundred/2.3);
+    height: 300px;
+
+    img {
+        margin: 0 auto;
+        display: block;
+        padding-top: 8.625em;
+    }
+}
+
+#calendar_info {
+    background: lighten($color4, $hundred/2.3);
+}
+
+// glDatePicker's point of entry.  
+// To display everything below it correctly,
+// these styles are meant to make it behave 
+// as if it is set to display: none;
+.calendar_input {
+    visibility: hidden;
+    display: block;
+    width: 0;
+    height: 0;
+    padding: 0 !important; // Overrides SharePoint style.
+    margin: -1px !important; // Only way to remove it completely.
+}
+
+.event {
+    padding: 0.5em;
+    height: 60px;
+}
+
+.event_icon {
+    padding: 0 1em 0 0;
+}
+
+.event_icon,
+.event_information {
+    float: left;
+}
+
+.event_date,
+.event_title {
+    margin: 0 !important; // Overrides SharePoint styles
+    line-height: 1 !important; // Overrides Sharepoint style
+    padding: 0.2em 0;
+}
+
+
+
+
+/**
+ * Style overrides for themes gldp comes with.
+ *
+ * - I have only added the flatwhite theme for 
+ *   testing purposes only.
+ */
+
+.gldp-flatwhite {
+    position: static !important;
+}
+
+
+
+
+/**
+ * Custom gldp style.
+ *
+ * - Used for custom branding of the calendar.
+ *
+ * - Defaults are styled to match SharePoint.
+ *
+ * - To make the gldp responsive, each cell requires
+ *   a width to be set as a percent.
+ */
+
+// Month-Year Title:
+.gldp-custom {
+    position: static;
+}
+
+// Core Style for every cell:
+.gldp-custom .core {
+    position: relative;
+    text-align: center;
+    float: left;
+}
+
+// Cell border:
+.gldp-custom .border {
+    border-style: solid;
+    border-color: lighten($color4, $hundred/3);
+    border-width: 0;
+    width: $hundred*0.14337 !important;
+}
+
+// Top row cell (left & right arrows and title with month & year):
+.gldp-custom .monyear,
+.gldp-custom .monyear select {
+    background: $color3;
+    color: $color1;
+}
+
+.gldp-custom .monyear {
+    width: $hundred*0.2 !important;
+}
+
+// Title Container 
+.gldp-custom .monyear.title {
+    width: $hundred*0.6 !important;
+}
+
+// Title Container's inner div:
+.gldp-custom .monyear.title > div {
+    border-left:  1px solid transparentize($color1, 0.5);
+    border-right: 2px solid transparentize($color1, 0.5);
+
+    span:hover {
+        cursor: pointer;
+    }
+}
+
+// Arrow colors & styles:
+.gldp-custom a.next-arrow,
+.gldp-custom a.prev-arrow {
+    color: $color1;
+
+    &:hover {
+        text-decoration: none; // Removes link underline declared in sharepoint.
+        cursor: default;
+    }
+}
+
+// Adds Seperator between month & year:
+.gldp-custom .title > div span:nth-child(1):after {
+    content: ' ';
+}
+
+// Days of the week:
+.gldp-custom .dow {
+    background: lighten($color4, $hundred/2.3);
+}
+
+// Last Month and Next Month Cells:
+.gldp-custom .outday {
+    color: lighten($color4, $hundred/3);
+}
+
+// Special Dates and selected:
+.gldp-custom .special,
+.gldp-custom .selected {
+    background: lighten($color4, $hundred/2.3);
+    color: $color3;
+}
+
+// Selected date:
+.gldp-custom .selected {
+    font-weight: bold;
+}

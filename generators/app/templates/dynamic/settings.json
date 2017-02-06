@@ -1,0 +1,6 @@
+{
+    "siteUrl"   : "<%= url %>",
+    "directory": "SiteAssets/customCalendar",
+    "username"  : "<%= username %>",
+    "password"  : "<%= password %>"
+}

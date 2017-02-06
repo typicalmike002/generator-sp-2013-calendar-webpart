@@ -1,0 +1,20 @@
+{
+  "name": "sp2013CustomWebpartCalendar",
+  "description": "Provides an easy way for creating a custom branded sharepoint 2013 webpart calendar that hooks into the default sharepoint calendar app.",
+  "main": "calendar.html",
+  "authors": [
+    "typicalmike002"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "javascript",
+    "sharepoint"
+  ],
+  "dependencies": {
+    "jquery": "https://code.jquery.com/jquery-3.1.0.min.js",
+    "knockout": "https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js",
+    "moment": "http://momentjs.com/downloads/moment-with-locales.min.js",
+    "SPServices": "https://raw.githubusercontent.com/sympmarc/SPServices/master/dist/jquery.SPServices.min.js",
+    "gl-datepicker-mod": "https://raw.githubusercontent.com/typicalmike002/glDatePicker-mod/sharepoint/glDatePicker-mod.min.js"
+  }
+}

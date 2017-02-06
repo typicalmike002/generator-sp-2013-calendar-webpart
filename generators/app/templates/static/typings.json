@@ -1,0 +1,14 @@
+{
+    "name": "sp2013CustomWebpartCalendar",
+    "dependencies": {},
+    "globalDependencies": {
+        "gldatepicker-mod": "https://raw.githubusercontent.com/typicalmike002/glDatePicker-mod/master/glDatePicker-mod.d.ts",
+        "jquery": "registry:dt/jquery#1.10.0+20160704162008",
+        "microsoft.ajax": "registry:dt/microsoft.ajax#0.0.0+20160706234802",
+        "moment": "registry:dt/moment#2.8.0+20160316155526",
+        "moment-node": "registry:dt/moment-node#2.11.1+20160511043338",
+        "sharepoint": "registry:dt/sharepoint#0.0.0+20160602140352",
+        "spServices": "https://raw.githubusercontent.com/typicalmike002/SPServices/master/dist/jquery.SPServices.d.ts",
+        "knockout": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/1a3b6bdf54455b5dd828afb149e6fc758acd23b6/knockout/knockout.d.ts"
+    }
+}

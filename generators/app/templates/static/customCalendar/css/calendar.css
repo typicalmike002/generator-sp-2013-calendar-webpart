@@ -1,0 +1,129 @@
+/**
+ * _elements.scss
+ *
+ * - Styles for the entire calendar webpart,
+ *   it contains notes on how to override the
+ *   default glDatePicker(gldp) styles.
+ *
+ * - There also may be sharepoint styles
+ *   you will also need to override.
+ */
+#calendar {
+  box-sizing: border-box;
+  max-width: 940px;
+  margin: 0 auto; }
+  #calendar *,
+  #calendar *:before,
+  #calendar *:after {
+    box-sizing: inherit; }
+
+.calendar_loader {
+  background: #f7f7f7;
+  height: 300px; }
+  .calendar_loader img {
+    margin: 0 auto;
+    display: block;
+    padding-top: 8.625em; }
+
+#calendar_info {
+  background: #f7f7f7; }
+
+.calendar_input {
+  visibility: hidden;
+  display: block;
+  width: 0;
+  height: 0;
+  padding: 0 !important;
+  margin: -1px !important; }
+
+.event {
+  padding: 0.5em;
+  height: 60px; }
+
+.event_icon {
+  padding: 0 1em 0 0; }
+
+.event_icon,
+.event_information {
+  float: left; }
+
+.event_date,
+.event_title {
+  margin: 0 !important;
+  line-height: 1 !important;
+  padding: 0.2em 0; }
+
+/**
+ * Style overrides for themes gldp comes with.
+ *
+ * - I have only added the flatwhite theme for 
+ *   testing purposes only.
+ */
+.gldp-flatwhite {
+  position: static !important; }
+
+/**
+ * Custom gldp style.
+ *
+ * - Used for custom branding of the calendar.
+ *
+ * - Defaults are styled to match SharePoint.
+ *
+ * - To make the gldp responsive, each cell requires
+ *   a width to be set as a percent.
+ */
+.gldp-custom {
+  position: static; }
+
+.gldp-custom .core {
+  position: relative;
+  text-align: center;
+  float: left; }
+
+.gldp-custom .border {
+  border-style: solid;
+  border-color: #dddddd;
+  border-width: 0;
+  width: 14.337% !important; }
+
+.gldp-custom .monyear,
+.gldp-custom .monyear select {
+  background: #444;
+  color: #fff; }
+
+.gldp-custom .monyear {
+  width: 20% !important; }
+
+.gldp-custom .monyear.title {
+  width: 60% !important; }
+
+.gldp-custom .monyear.title > div {
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.5); }
+  .gldp-custom .monyear.title > div span:hover {
+    cursor: pointer; }
+
+.gldp-custom a.next-arrow,
+.gldp-custom a.prev-arrow {
+  color: #fff; }
+  .gldp-custom a.next-arrow:hover,
+  .gldp-custom a.prev-arrow:hover {
+    text-decoration: none;
+    cursor: default; }
+
+.gldp-custom .title > div span:nth-child(1):after {
+  content: ' '; }
+
+.gldp-custom .dow {
+  background: #f7f7f7; }
+
+.gldp-custom .outday {
+  color: #dddddd; }
+
+.gldp-custom .special,
+.gldp-custom .selected {
+  background: #f7f7f7;
+  color: #444; }
+
+.gldp-custom .selected {
+  font-weight: bold; }
