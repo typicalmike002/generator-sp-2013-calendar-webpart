@@ -3,16 +3,18 @@
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-sp-2013-calendar-webpart using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
-npm install -g generator-sp-2013-calendar-webpart
 ```
 
-Then generate your new project:
+Then create a link to the generator and use yeoman to generate a new project:
 
 ```bash
+cd "path/to/repo/generator-sp-2013-calendar-webpart"
+npm link
+cd "path/to/your project/"
 yo sp-2013-calendar-webpart
 ```
 
